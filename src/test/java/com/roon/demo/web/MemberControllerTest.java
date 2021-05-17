@@ -96,7 +96,13 @@ public class MemberControllerTest {
     @Test
     public void 쿼리어노테이션_네이티브SQL(){
         List<Member> members = memberService.getByName_쿼리어노테이션_네이티브SQL("kim");
+        System.out.println(members.get(0).getName());
+        assertThat(members.get(0).getName()).isEqualTo("kim");
+    }
 
+    @Test
+    public void 쿼리어노테이션_이름기반바인딩(){
+        List<Member> members = memberService.getByName_쿼리어노테이션_이름기반_바인딩("kim");
         System.out.println(members.get(0).getName());
         assertThat(members.get(0).getName()).isEqualTo("kim");
     }

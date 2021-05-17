@@ -40,5 +40,9 @@ public class MemberService {
         return memberRepository.findByName2(name);
     }
 
+    public List<Member> getByName_쿼리어노테이션_이름기반_바인딩(String name){
+        return memberRepository.findByName_nameBased(name);
+    }
+
 
 }
